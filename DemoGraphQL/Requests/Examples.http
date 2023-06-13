@@ -1,4 +1,0 @@
-POST https://localhost:7280/graphql
-Content-Type: application/json
-
-{"query":"mutation AddBook {\r\n  addBook(book: { title: \"Arry Potter\", author: { name: \"Bigot\" } }) {\r\n    title\r\n    author {\r\n      name\r\n    }\r\n  }\r\n}\n\n\n\n\n\n"}

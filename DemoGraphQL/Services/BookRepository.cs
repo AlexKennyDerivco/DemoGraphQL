@@ -9,22 +9,13 @@ public class BookRepository
 
     public void AddBook(Book book)
     {
-        if(StoredBooks.All(x => x.Title != book.Title))
-            StoredBooks.Add(book);
+        if (StoredBooks.Any(x => x.Title == book.Title)) return;
+        StoredBooks.Add(book);
     }
 
-    public bool RemoveBook(string title)
-    {
-        return StoredBooks.RemoveAll(x => x.Title == title) == 0;
-    }
+    public bool RemoveBook(string title) => StoredBooks.RemoveAll(x => x.Title == title) != 0;
 
-    public Book? GetBook(string title)
-    {
-        return StoredBooks.FirstOrDefault(x => x.Title == title);
-    }
+    public Book? GetBook(string title) => StoredBooks.FirstOrDefault(x => x.Title == title);
 
-    public ReadOnlyCollection<Book> GetBooks()
-    {
-        return StoredBooks.AsReadOnly();
-    }
+    public ReadOnlyCollection<Book> GetBooks() => StoredBooks.AsReadOnly();
 }

@@ -1,5 +1,5 @@
 using DemoGraphQL.Services;
-using DemoGraphQL.Workerrs;
+using DemoGraphQL.Workers;
 using HotChocolate.AspNetCore;
 
 namespace DemoGraphQL;

@@ -1,8 +1,11 @@
 ﻿using DemoGraphQL.Services;
 using HotChocolate.Subscriptions;
 
-namespace DemoGraphQL.Workerrs;
+namespace DemoGraphQL.Workers;
 
+/// <summary>
+/// This background worker will update the revision of all books to make sure that they are up to date
+/// </summary>
 public class BackgroundWorker: BackgroundService
 {
     private readonly ILogger<BackgroundWorker> _logger;
