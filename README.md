@@ -2,6 +2,8 @@
 
 This is a very basic implementation of GraphQL in dotnet feel free to play around.
 
+It contains a book repository that is used to store books in memory and a background worker that will update the books every second to simulate subscription updates.
+
 ## How to run
 
 Build and run the application from your favourite IDE.
